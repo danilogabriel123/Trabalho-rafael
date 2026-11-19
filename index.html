@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Laboratórios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="topo">
+        <h1>Controle de Reserva de Laboratórios</h1>
+    </div>
+
+    <div class="pagina">
+        
+        <div class="coluna-esquerda">
+            <h2>Nova Reserva</h2>
+            
+            <div id="mensagem-sistema" class="mensagem"></div>
+
+            <form id="form-reserva">
+                <label for="nome-professor">Nome do Professor:</label>
+                <input type="text" id="nome-professor" maxlength="50">
+
+                <label for="matricula-professor">Matrícula:</label>
+                <input type="text" id="matricula-professor" maxlength="10">
+
+                <label for="select-laboratorio">Laboratório:</label>
+                <select id="select-laboratorio">
+                    <option value="">Selecione...</option>
+                </select>
+
+                <label for="data-reserva">Data da Reserva:</label>
+                <input type="date" id="data-reserva">
+
+                <label for="horario-reserva">Horário da Aula:</label>
+                <select id="horario-reserva">
+                    <option value="">Selecione o turno/horário...</option>
+                    <option value="08:00 às 10:00 (Manhã - 1º Horário)">08:00 às 10:00 (Manhã - 1º Horário)</option>
+                    <option value="10:10 às 12:00 (Manhã - 2º Horário)">10:10 às 12:00 (Manhã - 2º Horário)</option>
+                    <option value="14:00 às 16:00 (Tarde - 1º Horário)">14:00 às 16:00 (Tarde - 1º Horário)</option>
+                    <option value="16:10 às 18:00 (Tarde - 2º Horário)">16:10 às 18:00 (Tarde - 2º Horário)</option>
+                    <option value="18:30 às 20:20 (Noite - 1º Horário)">18:30 às 20:20 (Noite - 1º Horário)</option>
+                    <option value="20:30 às 22:10 (Noite - 2º Horário)">20:30 às 22:10 (Noite - 2º Horário)</option>
+                </select>
+
+                <label for="tipo-atividade">Tipo de Atividade:</label>
+                <select id="tipo-atividade">
+                    <option value="Aula Regular">Aula Regular</option>
+                    <option value="Monitoria / Pesquisa">Monitoria / Pesquisa</option>
+                </select>
+
+                <label for="finalidade-reserva">Finalidade:</label>
+                <input type="text" id="finalidade-reserva" maxlength="80">
+
+                <button type="submit">Salvar Reserva</button>
+            </form>
+        </div>
+
+        <div class="coluna-direita">
+            <h2>Situação dos Laboratórios</h2>
+            <div id="lista-laboratorios" class="lista-labs"></div>
+
+            <hr>
+
+            <h2>Reservas Registradas</h2>
+            <div id="lista-reservas">
+                <p class="vazio">Nenhuma reserva feita ainda.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
